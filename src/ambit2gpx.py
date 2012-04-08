@@ -94,6 +94,9 @@ def main():
         print str(err) # will print something like "option -a not recognized"
         usage()
         sys.exit(2)
+    if len(sys.argv[1:]) == 0:
+        usage()
+        sys.exit(2)
     output = None
     verbose = False
     altibaro = False
